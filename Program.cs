@@ -4,11 +4,15 @@ namespace RiderSQL;
 
 class Program
 {
+    /// <summary>
+    /// Main method
+    /// </summary>
+    /// <param name="args"></param>
     static void Main(string[] args)
     {
         const string connectionString =
             "Server=localhost,1433\\Catalog=Test;Database=Test;User=SA;Password=Zaratustra2020;";
-
+            
         using (SqlConnection con = new SqlConnection(connectionString))
         {
             try
@@ -21,6 +25,10 @@ class Program
             }
         }
     }
+    /// <summary>
+    /// HasRow method
+    /// </summary>
+    /// <param name="connection"></param>
     static void HasRows(SqlConnection connection)
     {
         using (connection)
